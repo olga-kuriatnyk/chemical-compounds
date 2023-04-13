@@ -1,11 +1,9 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import Card from './Components/Card';
-import { getData } from './fetch';
-import './style.css'
-
+import { getData } from './fetchData';
+import './styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
 
@@ -29,16 +27,18 @@ function App() {
 
   return (
     <div>
-      <button type='button' className='btn btn-outline-primary' onClick={handleClick}>Refresh Compounds</button>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div className='container'>
+        <button type='button' className='btn btn-outline-primary' onClick={handleClick}>Refresh Compounds</button>
+      </div>
+      <div class='row row-cols-1 row-cols-md-3 g-4'>
         {items.map((compound) => {
           return (
-              <Card
-                title={compound.title}
-                subtitle={compound.subtitle}
-                description={compound.description}
-                image={compound.image}
-              />
+            <Card
+              title={compound.title}
+              subtitle={compound.subtitle}
+              description={compound.description}
+              image={compound.image}
+            />
           )
         })}
       </div>
