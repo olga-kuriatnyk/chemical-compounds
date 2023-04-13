@@ -1,0 +1,14 @@
+.btn {
+    font-size: 1.5rem;
+    border-radius: 0.6rem;
+    background: #fff;
+    border: .1rem solid #003057;
+    color: #003057;
+    
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active, bt{
+    background-color: #003057 !important;
+    border:  .1rem solid#003057;
+    color: white;
+}
